@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AATHIKA & SURAJ 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background: radial-gradient(circle at top, #0a0f2c, #000000);
+  text-align:center;
+  overflow:hidden;
+  color:#ff9acb;
+}
+
+/* FLOWING HEARTS */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  color:pink;
+  font-size:18px;
+  opacity:0.8;
+  pointer-events:none;
+  animation:floatUp linear forwards;
+  filter: drop-shadow(0 0 6px hotpink);
+}
+@keyframes floatUp{
+  from{transform:translateY(0) scale(1);opacity:1;}
+  to{transform:translateY(-120vh) scale(1.6);opacity:0;}
+}
+
+/* CARD */
+.card{
+  max-width:680px;
+  margin:40px auto;
+  padding:28px;
+  background:rgba(255,255,255,0.12);
+  border-radius:22px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+  display:none;
+  opacity:0;
+  transition:opacity 1s ease;
+}
+
+.card.show{
+  display:block;
+  opacity:1;
+  overflow-y:auto;
+  max-height:90vh;
+}
+
+h1{
+  color:#ff6fb1;
+  text-shadow:0 0 15px #ff9acb;
+}
+
+p{
+  line-height:1.8;
+  font-size:16px;
+  text-align:left;
+  text-shadow:0 0 6px #ff9acb;
+}
+
+img{
+  width:100%;
+  border-radius:16px;
+  margin:14px 0;
+  box-shadow:0 0 35px rgba(255,182,193,0.6);
+}
+
+button{
+  padding:12px 24px;
+  border:none;
+  border-radius:26px;
+  font-size:16px;
+  cursor:pointer;
+  margin:10px;
+}
+.yes{background:#ff4da6;color:white;}
+.talk{background:#4d79ff;color:white;position:relative;}
+
+input{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgSong" autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="card show" id="p1">
+<h1>Our Childhood 🤍</h1>
+<img src="photo.jpg">
+
+<p>
+nee ithu eppdi edhutupa nu theriyala but ithu unakaga romba days spend panni ready panna confirm nee last page pathutu enakku slipper shot taruva athu enakku nallavae theriyum but final page la irukkura question ku olunga answer pannu plsssss nee etha pathiyum think pannama naa solradha konja kelu .....
+</p>
+
+<p>
+unakku intha photo nabagam irukka ithu namma 1st std la edutha photo namma rendhu perum class leader irunthom appo la life jollya irundhuchu enakku aathika va intha age la irundhae pudikum ........
+</p>
+
+<p>
+ithu inniko nethu start aanathu illa ithu appovae start aanathu......unakku 2nd std dance nabagam irukka....jollya irundhuchu but last adhu fun poi mudinchu.....
+</p>
+
+<button class="yes" onclick="go(2)">Next 💫</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="card" id="p2">
+<h1>Enter Birthday PIN 🔐</h1>
+<input id="pin" placeholder="Enter PIN">
+<br><br>
+<button class="yes" onclick="checkPin()">Unlock ❤️</button>
+<p id="pinMsg"></p>
+</div>
+
+<!-- PAGE 3 -->
+<div class="card" id="p3">
+<h1>Our Story ✨</h1>
+
+<p>
+antha 2nd std annual day appo enakku theriyala idhan naa unna last pakurathunu aprm en amma ku transfer naa vera school pona thirumba bvb ku vanthen but nee en class la illa till 4th std aprm thirumbavum en life la nee vantha adhan 5th std la en life la best part adhan namma rendhu perum peak friendship la irunthom
+</p>
+
+<p>
+nee notice panniya nu theriyala mam enna entha bench la potalum naa etho oru reason solli un bench ku vanthuruven nee en note pathu tha copy pannuva athu aprm yaaru en note pathu eluthunalum nee tha nabagam varuva.....
+</p>
+
+<p>
+5th std la corona lockdown enakku theriyala naa atha unna last pakurathunu un number kooda naa vangala aprm en life la naa senja periya mistake school change panna naa aathika va romba miss panna lasta unkitta oru goodbye kooda sollala
+</p>
+
+<p>
+aprm contact illa konja naal naanum aathika va maranthuta aprm vijaya text panna thirumbavum en life la re entry aathika kudutha nejamavae ithu oru miracle tha
+</p>
+
+<p>
+aprm nalla pesunom childhood friendship maari illa but different nalla tha irundhuchu aprm insta va vittu nee pona distance romba increase achu
+</p>
+
+<p>
+naa tha eppovum first text pannuva unnoda reply kooda late tha varum naa appo la think pannuva naa en intha ponnu kaga ithela pannanu nu but next second naa ithela marandhuruven.....
+</p>
+
+<button class="yes" onclick="go(4)">Next 💖</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="card" id="p4">
+<h1>From My Heart 🤍</h1>
+
+<p>
+Aathika naa eppo love pathi pesunalum sandha tha varum ethana vaati naa ithu sonnalum nee kakamatta athu Enakku nallavae theriyum en ippovum nee sollamatta.....
+</p>
+
+<p>
+nee Unnoda appearance nalla irukkathu naa regret pannuva nu sonna athu maybe Unnoda opinion but Enakku nee eppaiyum alagu tha athu en nu Enakku theriyathu nee nejamavae alagu tha aathika athu unakku oru naal puriyum
+</p>
+
+<p>
+family strict Enakku puriyuthu Unnoda family vida ennoda family romba strict tha but Enakku ellataiyum vida unna tha pudikum
+</p>
+
+<p>
+aprm caste .....namma rendhu perukum irukkurae orae advantage adhan namma rendhu perum hindhu aprm rendhu perum bc adhan namma kitta irukkura advantage athula namma different caste tha but samaluchukalam naa irukken
+</p>
+
+<p>
+namma rendhu perum senthu life la namma career la successful irundha pothum ellamae nallatha nadanthu mudiyum
+</p>
+
+<p>
+nee ok nu one word mattum sollu naa 200/200 cutoff eduppan💯 Neeyum eduppa rendhu perukum oru motivation irukkum
+</p>
+
+<button class="yes" onclick="go(5)">Next 🌷</button>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="card" id="p5">
+<h1>One Last Question ❤️</h1>
+
+<p>
+Aathika, idhu naan light-aa solradhu illa.<br>
+Idhu naan romba yosichi, romba feel panni,<br>
+romba time eduthu solradhu.<br><br>
+
+Naa unna oru habit-aa illa,<br>
+oru phase-aa illa,<br>
+oru option-aa kooda illa.<br><br>
+
+Naa unna en life-la main person-aa choose panniten.<br><br>
+
+Naa unna ellam sari irukkumbodhu mattum illa,<br>
+bayam irukkumbodhum,<br>
+confusion irukkumbodhum,<br>
+future clear illa nu therinjirundhaalum choose panniten.<br><br>
+
+Nee unna doubt pannumbodhu,<br>
+naa unna doubt pannala.<br><br>
+
+Nee bayapadumbodhu,<br>
+naa odala.<br><br>
+
+Nee “naa worth illa” nu nenaikkumbodhu,<br>
+enakku nee dhaan ellam.<br><br>
+
+Just idhu mattum:<br><br>
+
+“Naa unna accept pannuren.<br>
+Namma rendu perum try pannalaam.”<br><br>
+
+Family strict nu theriyum,<br>
+caste different nu theriyum,<br>
+life easy illa nu theriyum —<br>
+ellam therinju dhaan naa inga nikkiren.<br><br>
+
+Naa perfect illa,<br>
+aana naa sincere.<br><br>
+
+Naa unna protect pannanum nu thaniyaa decide panniten.<br><br>
+
+<strong>
+Aathika, indha ulagathula ellam change aagalam,<br>
+aana naan unna choose pannadhu mattum eppovum change aagaathu.
+</strong><br><br>
+
+Ippo sollu Aathika…<br>
+nee en kooda irukka ok-va?
+</p>
+
+<div id="finalMsg" style="display:none;font-size:26px;margin-top:20px;color:#ff6fb1;">
+I LOVE YOU ❤️
+</div>
+
+<button class="yes" onclick="showLove()">Yes ❤️</button>
+<button class="talk" onclick="showLove()">Let’s talk 😊</button>
+</div>
+
+<script>
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerText="❤";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(14+Math.random()*26)+"px";
+  h.style.animationDuration=(6+Math.random()*6)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),12000);
+},400);
+
+function go(n){
+  document.querySelectorAll(".card").forEach(c=>c.classList.remove("show"));
+  document.getElementById("p"+n).classList.add("show");
+}
+
+function checkPin(){
+  if(document.getElementById("pin").value==="47115"){
+    go(3);
+  }else{
+    document.getElementById("pinMsg").innerText="Wrong PIN 😅";
+  }
+}
+
+function showLove(){
+  document.getElementById("finalMsg").style.display="block";
+}
+</script>
+
+</body>
+</html>
